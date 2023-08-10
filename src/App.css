@@ -1,38 +1,546 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+/*
+font-family: 'Roboto', sans-serif;
+*/
+
+body {
+  margin: 0;
+
+  font-family: "Roboto", sans-serif;
+  color: rgb(31, 31, 31);
+
+  --color0: #1f1f1f;
+  --color01: #424242;
+  --colornope: #8b8b8b;
+  --color1: #0454fa;
+  --color1alt: #6497fb;
+  --color2: #f1f1f1;
+  --color3: #e2e2e2;
+
+  background-color: var(--color2);
+}
+
 .App {
   text-align: center;
+
+  /* min-height: 200vh; */
+  /* overflow: hidden; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/*============Dapp=============*/
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.DMain {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.DNavbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  height: 80px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.DNLeft {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 700px;
+
+  /* border: #0454fa solid 1px; */
+}
+
+.DNLeft img {
+  height: 50px;
+}
+
+.DNMenu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 500px;
+
+  /* border: #d104fa solid 1px; */
+}
+
+.DNavBtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 20px;
+  margin-left: 7px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+
+  /* border: #4efa04 solid 1px; */
+}
+
+.DNavBtn:hover {
+  background-color: var(--color3);
+}
+
+.DNavBtn p {
+  padding: 0%;
+  margin-right: 4px;
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-bottom: 0px;
+}
+
+.DNRight {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 10px;
+  margin-left: 3px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  border-radius: 0.3rem;
+}
+
+.Btn:hover {
+  background-color: var(--color3);
+}
+
+.Btn p {
+  padding: 0%;
+  margin-right: 4px;
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-bottom: 0px;
+}
+
+.Btn img {
+  height: 23px;
+}
+
+.connect-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 10px;
+  margin-left: 3px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  border-radius: 0.3rem;
+  border: none;
+  background-color: var(--color1);
+  color: var(--color2);
+}
+
+.connect-button:hover {
+  background-color: var(--color1alt);
+}
+
+.connect-button p {
+  padding: 0%;
+  margin-right: 4px;
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-bottom: 0px;
+}
+
+.DMainContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  width: 100%;
+
+  /* border: #f5b23d solid 1px; */
+}
+
+.DContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 800px;
+
+  /* border: #4efa04 solid 1px; */
+}
+
+.Uniswap {
+  margin-left: 10px;
+}
+
+.DContainerLI {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 800px;
+}
+
+.LITopBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  padding: 10px 20px;
+  border-radius: 1rem;
+  color: var(--color2);
+  background-image: linear-gradient(to right, var(--color1), var(--color1alt));
+  margin-bottom: 20px;
+  width: 800px;
+
+  /* border: #4efa04 solid 1px; */
+}
+
+.LITopBox h2,
+p {
+  padding: 0;
+}
+
+.LIBottomBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 1rem;
+  color: var(--color01);
+  background-color: white;
+  margin-bottom: 20px;
+  width: 800px;
+
+  /* border: #4efa04 solid 1px; */
+}
+
+.CBalt {
+  width: 95%;
+  height: 60px;
+  border-radius: 1rem;
+  font-size: 20px;
+}
+
+.DContainerST {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  padding: 7px;
+  border-radius: 0.7rem;
+  background-color: white;
+
+  /* border: #fa7704 solid 1px; */
+}
+
+.SBoxMod {
+  width: 555px;
+
+  /* border: #fa045a solid 1px; */
+}
+
+.StakeBtnContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 68px;
+  background-color: var(--color01);
+  border-radius: 0.8rem;
+  margin-bottom: 8px;
+  /* padding: 4px; */
+
+  /* border: #4efa04 solid 1px; */
+}
+
+.SBtn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 48%;
+  height: 52px;
+  margin-left: 4px;
+  margin-right: 4px;
+  border-radius: 0.8rem;
+  background-color: var(--color1);
+  color: var(--color2);
+  cursor: pointer;
+
+  /* border: #0404fa solid 1px; */
+}
+
+.SBFalse {
+  background-color: var(--colornope);
+  color: var(--color0);
+}
+
+.StakeTextContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: self-end;
+  width: 100%;
+}
+
+.StakeTextContainer h2 {
+  padding: 0%;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-weight: 100;
+  font-size: 20px;
+}
+
+.STextBottomContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.STextBottomContainerLeft {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 120px;
+
+  /* border: #0404fa solid 1px; */
+}
+
+.SbtnText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 5px;
+}
+
+.SbtnText p {
+  font-size: 12px;
+}
+
+.SInput {
+  background-color: var(--color0);
+  outline: none;
+  border: none;
+  height: 40px;
+  width: 570px;
+  border-radius: 0.8rem;
+}
+
+input,
+select,
+textarea {
+  color: var(--color2);
+  font-size: 24px;
+  padding: 12px 20px;
+}
+
+textarea:focus,
+input:focus {
+  color: var(--color2);
+  font-weight: bold;
+}
+
+.CBalt2 {
+  width: 109%;
+  height: 60px;
+  border-radius: 1rem;
+  font-size: 20px;
+}
+
+.BUTextMod {
+  align-items: center;
+}
+
+.BUTextMod span {
+  color: var(--color1alt);
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.CBalt3 {
+  width: 109%;
+  height: 60px;
+  border-radius: 1rem;
+  font-size: 20px;
+  cursor: not-allowed;
+}
+
+.CBalt3:hover {
+  background-color: var(--color1);
+}
+
+.DContainerFA {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 400px;
+
+  /* border: #0404fa solid 1px; */
+}
+
+.FALeftBox {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: left;
+  width: auto;
+  padding: 10px;
+  height: 90%;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 1.5rem;
+  background-color: var(--color3);
+
+  /* border: #199467 solid 1px; */
+}
+
+.FALeftBox h2,
+p {
+  padding: 0%;
+  margin: 0;
+}
+
+.FLink {
+  text-decoration: none;
+  color: var(--color1);
+}
+
+.FARightBox {
+  display: flex;
+  flex: 3;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: auto;
+  height: 90%;
+  padding: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 1.5rem;
+  background-color: white;
+
+  /* border: #fa4e04 solid 1px; */
+}
+
+.FRBUp {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  height: 50px;
+
+  /* border: #04fa4a solid 1px; */
+}
+
+.FASwitchContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 20%;
+  height: 50px;
+  background-color: var(--color01);
+  border-radius: 1.2rem;
+
+  /* border: #04fa4a solid 1px; */
+}
+
+.FBtn {
+  cursor: pointer;
+  color: var(--color2);
+}
+
+.FBtn p {
+  font-weight: bold;
+}
+
+.FBFalse {
+  color: var(--colornope);
+}
+
+.SearchBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 80%;
+  height: 50px;
+  /* background-color: var(--color01); */
+  border-radius: 1.2rem;
+  position: relative;
+
+  /* border: #04fa4a solid 1px; */
+}
+
+.SFInput {
+  font-weight: 100;
+  font-size: 17px;
+  outline: none;
+  /* height: 40px; */
+  width: 95%;
+  border-radius: 1.2rem;
+}
+
+.SFInput input {
+  color: var(--color2);
+  font-weight: 100;
+  font-size: 17px;
+}
+
+.SFInput select {
+  color: var(--color2);
+  font-weight: 100;
+  font-size: 17px;
+}
+
+.SFInput textarea {
+  color: var(--color2);
+  font-weight: 100;
+  font-size: 17px;
+}
+
+.SFInput textarea:focus,
+input:focus {
+  color: var(--color0);
+  font-weight: 100;
+  font-size: 17px;
+}
+
+.SearchIcon {
+  position: absolute;
+  cursor: pointer;
+  right: 30px;
+}
+
+.FRBDown {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 87%;
+  height: 50px;
+
+  /* border: #04fa4a solid 1px; */
 }
