@@ -22,14 +22,15 @@ import { BiData } from "react-icons/bi";
 import { BiDollarCircle } from "react-icons/bi";
 import { BsArrowUpRight } from "react-icons/bs";
 import { AiOutlineSearch } from "react-icons/ai";
+import { BsList } from "react-icons/bs";
 
 const Dapp = () => {
-  //const [isMetamaskConnected, setIsMetamaskConnected] = useState(false);
+  const [isMetamaskConnected, setIsMetamaskConnected] = useState(false);
   const connectMetamask = async () => {
     if (window.ethereum) {
       try {
         await window.ethereum.enable();
-        //setIsMetamaskConnected(true);
+        setIsMetamaskConnected(true);
       } catch (error) {
         console.error("Error connecting to MetaMask:", error);
       }
@@ -45,11 +46,16 @@ const Dapp = () => {
   const NATIVE = "NATIVE"; // Special address for native token
 
   // WBTC as the default output token
-  // const WBTC = "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599";
+  const WBTC = "0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA";
 
   const [selection, setSelection] = useState("trade");
   const [stake, setStake] = useState(true);
   const [farm, setFarm] = useState(true);
+  const [popup, setPopup] = useState(false);
+
+  const menuing = () => {
+    setPopup(!popup);
+  };
 
   return (
     <div className="DMain">
@@ -102,6 +108,40 @@ const Dapp = () => {
             Connect to a Wallet
           </button>
         </div>
+      </div>
+      <IconContext.Provider value={{ color: "black", size: "2.5em" }}>
+        <div className="PopUp" onClick={() => menuing()}>
+          <BsList />
+        </div>
+      </IconContext.Provider>
+      <div className={popup ? "PopUpWindow" : "PopUpWindowC"}>
+        <a href="https://stakedex.bond/" target="_blank" className="MenuLink">
+          <p>Stake Dex Website</p>
+          <h2>Homepage</h2>
+        </a>
+        <br />
+        <a
+          href="https://stakedex.gitbook.io/stakedexbase/welcome/introduction"
+          target="_blank"
+          className="MenuLink"
+        >
+          <p>See how it works</p>
+          <h2>Documentation</h2>
+        </a>
+        <br />
+        <a href="https://t.me/bStakeDex" target="_blank" className="MenuLink">
+          <p>Join us on Telegram</p>
+          <h2>Telegram</h2>
+        </a>
+        <br />
+        <a
+          //</div>href=""
+          //</div>target="_blank"
+          className="MenuLink"
+        >
+          <p>Official Twitter Account</p>
+          <h2>Twitter</h2>
+        </a>
       </div>
       <div className="DMainContainer">
         <AnimatePresence mode="wait" initial={false}>
