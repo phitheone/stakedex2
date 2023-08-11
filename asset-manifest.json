@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.4007ab60.css",
+    "main.css": "/static/css/main.1336076a.css",
     "main.js": "/static/js/main.de388f89.js",
     "static/js/904.3f2029c3.chunk.js": "/static/js/904.3f2029c3.chunk.js",
     "static/js/87.13cf095b.chunk.js": "/static/js/87.13cf095b.chunk.js",
@@ -95,7 +95,7 @@
     "static/media/inter-vietnamese-500-normal.woff2": "/static/media/inter-vietnamese-500-normal.af96698e6248b5be6d91.woff2",
     "static/media/inter-vietnamese-400-normal.woff2": "/static/media/inter-vietnamese-400-normal.789afb71d327988e2fc8.woff2",
     "index.html": "/index.html",
-    "main.4007ab60.css.map": "/static/css/main.4007ab60.css.map",
+    "main.1336076a.css.map": "/static/css/main.1336076a.css.map",
     "main.de388f89.js.map": "/static/js/main.de388f89.js.map",
     "904.3f2029c3.chunk.js.map": "/static/js/904.3f2029c3.chunk.js.map",
     "87.13cf095b.chunk.js.map": "/static/js/87.13cf095b.chunk.js.map",
@@ -137,7 +137,7 @@
     "459.d49cdb6b.chunk.js.map": "/static/js/459.d49cdb6b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4007ab60.css",
+    "static/css/main.1336076a.css",
     "static/js/main.de388f89.js"
   ]
 }
